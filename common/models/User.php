@@ -7,20 +7,7 @@ use yii\behaviors\TimestampBehavior;
 //use yii\db\ActiveRecord;
 use yii\web\IdentityInterface;
 use common\models\AdvancedActiveRecord;
-/**
- * User model
- *
- * @property integer $id
- * @property string $username
- * @property string $password_hash
- * @property string $password_reset_token
- * @property string $email
- * @property string $auth_key
- * @property integer $public $status
- * @property integer $created_at
- * @property integer $updated_at
- * @property string $password write-only password
- */
+
 class User extends AdvancedActiveRecord implements IdentityInterface
 {
     const STATUS_DELETED = 0;
@@ -39,8 +26,8 @@ class User extends AdvancedActiveRecord implements IdentityInterface
 
     public function attributes(){
         return array_merge(parent::attributes(),array(
-'_id','username','email',      'username',
-'password_hash',
+            'username',
+            'password_hash',
 'password_reset_token',
 'email',
 'auth_key',
