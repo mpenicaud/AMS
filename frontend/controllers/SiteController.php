@@ -12,7 +12,7 @@ use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
-use common\models\Element;
+use common\models\Child;
 use common\models\User;
 /**
  * Site controller
@@ -171,7 +171,7 @@ class SiteController extends Controller
     }
     
     public function actionTestchild(){
-$child = new Element();
+$child = new Child();
 $child->name = "testName";
 $child->surname = "testSurname";
 //$child->birthDate = date('dd/M/yyyy',strtotime("2010-10-15"));

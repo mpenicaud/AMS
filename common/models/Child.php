@@ -5,13 +5,10 @@ namespace common\models;
 
 use common\models\AdvancedActiveRecord;
 
-class Element extends AdvancedActiveRecord
-{
+class Child extends AdvancedActiveRecord {
 
-//public $type;   
-//public $name;
-//public $surname;
-//public $birthDate;
+ 
+
     public static function tableName()
     {
         return '{{%element}}';
@@ -19,18 +16,17 @@ class Element extends AdvancedActiveRecord
     
 public function init() {
     parent::init();
-    $this->type==self::TYPE_CHILD;
     
 }
 
 public function attributes() {
     return yii\helpers\ArrayHelper::merge(parent::attributes(),
             [
-                'type',
+                
                 'name',
                 'surname',
-                'birthDate'
-            ]);
+                'birthDate',
+        ]);
 }
     /**
      * @inheritdoc
